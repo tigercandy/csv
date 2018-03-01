@@ -1,9 +1,14 @@
-Export huge amounts of data for csv.
+<?php
+/**
+ * Author: virtual.tang@yingzt.com
+ * Date: 2018/3/1
+ * Time: 下午2:16
+ */
 
-#### Use
-```php
 $csv = new CSV();
+
 $header = ["姓名", "性别", "手机号", "金额"];
+
 $fp = $csv->create($title = '测试', $header);
 
 $show_data = ['user_name', 'gender', 'mobile', 'money'];
@@ -20,4 +25,3 @@ $data = [
 ];
 
 $csv->writeDataToCSV($show_data, $data, $fp);
-```
